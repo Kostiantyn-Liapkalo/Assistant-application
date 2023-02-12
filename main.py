@@ -51,16 +51,16 @@ def say_goodbye(lst):
     return "Good bye!"
 
 
-# The function records or changes the number in the phone book, and if there are two words firstname lastname, 
-# then we combine them into one line. Recording will take place only if the number consists only of numbers 
+# The function records or changes the number in the phone book, and if there are two words firstname lastname,
+# then we combine them into one line. Recording will take place only if the number consists only of numbers
 # and is of sufficient length.
 @input_error
 def set_number(lst):
-    
+
     phone = str(lst[-1])
     name = " ".join(lst[:-1])
     phone = sanitize_phone_number(phone)
-    
+
     if phone:
         phone_book[name.title()] = phone
         return f"Contact {name.title()} was created/updated"
@@ -68,9 +68,14 @@ def set_number(lst):
         return ""
 
 
+# The function displays the phone number of the subscriber whose name was in the command 'phone ...'
+@input_error
+def show_phone(lst):
+    
+    name = " ".join(lst)
+    return phone_book[name.title()]
 
 
 
-
-
-
+    
+    
