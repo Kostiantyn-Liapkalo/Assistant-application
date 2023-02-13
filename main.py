@@ -76,6 +76,42 @@ def show_phone(lst):
     return phone_book[name.title()]
 
 
-
+# The function displays all entries in the phone book with the 'show all' command.
+@input_error
+def show_all(lst):
     
+    if len(phone_book) == 0:
+        return "Phone book is empty"
+    text = ""
+    for name, phone in phone_book.items():
+        text += f"{name} {phone}\n"
+    return text.strip()
+
+
+commands = {
+    ("add", "change"): set_number,
+    "phone": show_phone,
+    "show all": show_all,
+    "hello": say_hello,
+    ("good bye", "close", "exit"): say_goodbye,
+    "help": help
+}
+
+# # Keys are keywords in commands. 
+# # Values are functions that are called by these commands.
+# @input_error
+# def main():
+    
+#     while True:
+#         command = input("Enter command: ")
+#         if command in (".", ):
+#             break
+#         command = command.lower().split()
+#         for key in commands:
+#             if command[0] in key:
+#                 print(commands[key](command[1:]))
+
+
+# if __name__ == "__main__":
+#     main()
     
