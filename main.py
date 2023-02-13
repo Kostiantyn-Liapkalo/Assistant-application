@@ -76,7 +76,16 @@ def show_phone(lst):
     return phone_book[name.title()]
 
 
-
+def help(lst):
+    rules = """List of commands:
+    1) if you want to add new contact, please write command: add {name} {phone number}
+    2) if you want to change contact, please write command: change {name} {phone number}
+    3) if you want to see the phone of contact, please write command: phone {name}
+    4) if you want to see all contacts, please write command: show all
+    5) if you want to say goodbye, please write one of these commands: good bye / close / exit
+    6) if you want to say hello, please write command: hello
+    """
+    return rules
 
 
 # The function displays all entries in the phone book with the 'show all' command.
