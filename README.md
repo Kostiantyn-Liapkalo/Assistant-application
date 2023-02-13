@@ -6,7 +6,7 @@ Bot capabilities and commands:
 - The bot is in an endless loop, waiting for a user command.
 - The bot completes its work if it meets words.
 - The bot is not case sensitive.
-The bot accepts commands:
+- The bot accepts commands:
 
         - "hello", replies to the console "How can I help you?"
         
