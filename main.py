@@ -88,30 +88,3 @@ def show_all(lst):
     return text.strip()
 
 
-# commands = {
-#     ("add", "change"): set_number,
-#     "phone": show_phone,
-#     "show all": show_all,
-#     "hello": say_hello,
-#     ("good bye", "close", "exit"): say_goodbye,
-#     "help": help
-# }
-
-# # Keys are keywords in commands. 
-# # Values are functions that are called by these commands.
-# @input_error
-# def main():
-    
-#     while True:
-#         command = input("Enter command: ")
-#         if command in (".", ):
-#             break
-#         command = command.lower().split()
-#         for key in commands:
-#             if command[0] in key:
-#                 print(commands[key](command[1:]))
-
-
-# if __name__ == "__main__":
-#     main()
-    
