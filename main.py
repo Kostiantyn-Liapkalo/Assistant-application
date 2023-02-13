@@ -88,3 +88,13 @@ def show_all(lst):
     return text.strip()
 
 
+commands = {
+    ("add", "change"): set_number,
+    "phone": show_phone,
+    "show all": show_all,
+    "hello": say_hello,
+    ("good bye", "close", "exit"): say_goodbye,
+    "help": help
+}
+
+
